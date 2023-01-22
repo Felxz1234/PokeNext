@@ -1,0 +1,37 @@
+@use "mixins";
+@use "variables";
+
+.navbar{
+    @include mixins.justify($alg:center,$jst:space-between);
+    padding: 1em 1.2em; 
+    margin-bottom: 2em;
+    background-color: variables.$color-gray;
+    color: variables.$color-white;
+
+    div{  
+        @include mixins.justify($alg:center,$jst:center);  
+
+        h1{
+            margin-left: .5em;          
+        }
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+
+    }
+
+}
+
+.linkStyle{
+    color: variables.$color-white;
+    text-decoration: none;
+    padding: 5px;
+    transition: .4s;
+    border-bottom: 2px solid transparent;
+
+    &:hover{
+        border-color: variables.$color-white ;
+    }
+}

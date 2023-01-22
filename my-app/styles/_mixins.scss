@@ -1,0 +1,5 @@
+@mixin justify($jst,$alg){
+    display: flex;
+    justify-content:$jst;
+    align-items:$alg ;
+}
