@@ -1,0 +1,27 @@
+@use "mixins";
+@use "variables";
+
+.title_container{
+    @include mixins.justify($jst:center,$alg:center);
+    @include mixins.marginB($m:2em);
+
+    h1{
+        color: #e33d33;
+        text-align: center;
+        font-size: 3em;
+        margin-right: .4em;
+
+        span{
+            color: variables.$color-gray;
+        }
+
+    }
+}
+
+
+.pokemonContainer{
+    @include justify($jst:space-between,$alg:center);
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}

@@ -3,3 +3,8 @@
     justify-content:$jst;
     align-items:$alg ;
 }
+
+
+@mixin marginB($m){
+    margin-bottom: $m;
+}
