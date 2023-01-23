@@ -6,7 +6,7 @@
     @include mixins.marginB($m:2em);
 
     h1{
-        color: #e33d33;
+        color: variables.$color-red;
         text-align: center;
         font-size: 3em;
         margin-right: .4em;
@@ -20,7 +20,7 @@
 
 
 .pokemonContainer{
-    @include justify($jst:space-between,$alg:center);
+    @include mixins.justify($jst:space-between,$alg:center);
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;

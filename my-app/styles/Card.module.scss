@@ -1,0 +1,47 @@
+@use "mixins";
+@use "variables";
+
+.card{
+    @include mixins.justify($jst:center,$alg:center);
+    flex-direction: column;
+    padding: 2em 1em;
+    @include mixins.marginB($m:2em);
+    width: 23%;
+    border-radius: 1em;
+    border: 2px solid variables.$color-red;
+    box-sizing: 5px 5px 12px rgba(0,0,0,0.5);
+    background-color: variables.$color-gray;
+
+    p{
+        margin: 1em 0;
+        background-color:variables.$color-red;
+        border-radius: 5px;
+        color:variables.$color-white ;
+        padding: 5px;
+        @include mixins.justify($jst:center,$alg:center);
+
+    }
+
+    h3{
+        text-transform: capitalize;
+        @include mixins.marginB($m:1em);
+        font-size: 1.4em;
+    }
+
+}
+
+.btn{
+    text-decoration: none;
+    background-color: variables.$color-white;
+    color: #222;
+    padding: .7em 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.4s;
+
+    &:hover{
+        background-color: variables.$color-red;
+        color: variables.$color-white;
+    }
+
+}

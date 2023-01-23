@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 
+
+import Card from '@/components/Card'
+
 type arrayPokemon = {
   name:string,
   url:string,
@@ -35,15 +38,18 @@ export default function home({pokemons}:any){
     <>
       <div className={styles.title_container}>
         <h1>Poke<span>Next</span></h1>
-        <Image src="/images/pokeball.png" width="50" height="50" alt="pokedex" ></Image>
+       <Image
+       alt={pokemons.name}
+        width="50"
+        height="50"
+        src='/images/pokeball.png'></Image>
       </div>
       <div className={styles.pokemonContainer}>
         {pokemons.map((pokemon:arrayPokemon)=>(
-          <p key={pokemon.id} >{pokemon.name}</p>
+          <Card key={pokemon.id} pokemon={pokemon}></Card>
         ))}
       </div>
     </>
-    
   )
 }
 
