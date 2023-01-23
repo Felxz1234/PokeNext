@@ -24,4 +24,8 @@
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
+    @include mixins.mobile{
+        flex-direction: column;
+    }
 }
+

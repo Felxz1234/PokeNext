@@ -2,6 +2,9 @@
 @use "variables";
 
 .card{
+    @include mixins.mobile{
+        width: 70%;     
+    }
     @include mixins.justify($jst:center,$alg:center);
     flex-direction: column;
     padding: 2em 1em;
@@ -29,6 +32,8 @@
     }
 
 }
+
+
 
 .btn{
     text-decoration: none;
