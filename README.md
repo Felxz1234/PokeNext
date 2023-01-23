@@ -1,3 +1,3 @@
 # PokeNext
 
-aplicão pokedex feita com nextJs, sass e typescript
+aplicação pokedex feita com nextJs, sass e typescript
